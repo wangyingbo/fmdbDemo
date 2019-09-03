@@ -113,7 +113,6 @@
 				B6B9EDB2C5F2A0AEE91DC745 /* Pods-fmdbDemoUITests.debug.xcconfig */,
 				12D8F557B1A82A3BC773D5A2 /* Pods-fmdbDemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
