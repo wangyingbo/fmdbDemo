@@ -9,5 +9,6 @@
 #import "YBSchool.h"
 
 @implementation YBSchool
+YB_IMPLEMENTATION_CODE_WITH_CODER
 
 @end

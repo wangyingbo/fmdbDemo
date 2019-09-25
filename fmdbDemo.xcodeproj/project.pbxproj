@@ -12,7 +12,7 @@
 		D148D46E233B4E8000D9E933 /* YBItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D46D233B4E8000D9E933 /* YBItem.m */; };
 		D148D474233B4F1400D9E933 /* YBSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D473233B4F1400D9E933 /* YBSchool.m */; };
 		D148D477233B4F2400D9E933 /* YBClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D476233B4F2400D9E933 /* YBClass.m */; };
-		D148D47A233B4F2E00D9E933 /* YBName.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D479233B4F2E00D9E933 /* YBName.m */; };
+		D148D47A233B4F2E00D9E933 /* YBStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D479233B4F2E00D9E933 /* YBStudent.m */; };
 		D148D47E233B538B00D9E933 /* YBFunctionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D47D233B538B00D9E933 /* YBFunctionTool.m */; };
 		D1B7C6E7231DF515003A3BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B7C6E6231DF515003A3BDA /* AppDelegate.m */; };
 		D1B7C6EA231DF515003A3BDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B7C6E9231DF515003A3BDA /* ViewController.m */; };
@@ -58,8 +58,8 @@
 		D148D473233B4F1400D9E933 /* YBSchool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSchool.m; sourceTree = "<group>"; };
 		D148D475233B4F2400D9E933 /* YBClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBClass.h; sourceTree = "<group>"; };
 		D148D476233B4F2400D9E933 /* YBClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBClass.m; sourceTree = "<group>"; };
-		D148D478233B4F2E00D9E933 /* YBName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBName.h; sourceTree = "<group>"; };
-		D148D479233B4F2E00D9E933 /* YBName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBName.m; sourceTree = "<group>"; };
+		D148D478233B4F2E00D9E933 /* YBStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBStudent.h; sourceTree = "<group>"; };
+		D148D479233B4F2E00D9E933 /* YBStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBStudent.m; sourceTree = "<group>"; };
 		D148D47B233B4F6800D9E933 /* YBMecros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBMecros.h; sourceTree = "<group>"; };
 		D148D47C233B538B00D9E933 /* YBFunctionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBFunctionTool.h; sourceTree = "<group>"; };
 		D148D47D233B538B00D9E933 /* YBFunctionTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBFunctionTool.m; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 				D148D473233B4F1400D9E933 /* YBSchool.m */,
 				D148D475233B4F2400D9E933 /* YBClass.h */,
 				D148D476233B4F2400D9E933 /* YBClass.m */,
-				D148D478233B4F2E00D9E933 /* YBName.h */,
-				D148D479233B4F2E00D9E933 /* YBName.m */,
+				D148D478233B4F2E00D9E933 /* YBStudent.h */,
+				D148D479233B4F2E00D9E933 /* YBStudent.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,7 +441,7 @@
 				D148D46E233B4E8000D9E933 /* YBItem.m in Sources */,
 				D1B7C6F5231DF516003A3BDA /* main.m in Sources */,
 				D1B7C6E7231DF515003A3BDA /* AppDelegate.m in Sources */,
-				D148D47A233B4F2E00D9E933 /* YBName.m in Sources */,
+				D148D47A233B4F2E00D9E933 /* YBStudent.m in Sources */,
 				D148D477233B4F2400D9E933 /* YBClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,5 +9,6 @@
 #import "YBClass.h"
 
 @implementation YBClass
+YB_IMPLEMENTATION_CODE_WITH_CODER
 
 @end

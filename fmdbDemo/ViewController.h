@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger,YBFuncItem) {
+    /***/
+    YBFuncItemSemaphore = 100,
+    /***/
+    YBFuncItemFMDBCreateDB,
+    /***/
+    YBFuncItemFMDBCreateTable,
+    /***/
+    YBFuncItemFMDBInsert,
+    /***/
+    YBFuncItemFMDBDelete,
+    /***/
+    YBFuncItemFMDBSort,
+    /***/
+    //YBFuncItem,
+};
+
 @interface ViewController : UIViewController
 
 

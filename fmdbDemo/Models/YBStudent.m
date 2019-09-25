@@ -6,8 +6,9 @@
 //  Copyright © 2019 王颖博. All rights reserved.
 //
 
-#import "YBName.h"
+#import "YBStudent.h"
 
-@implementation YBName
+@implementation YBStudent
+YB_IMPLEMENTATION_CODE_WITH_CODER
 
 @end

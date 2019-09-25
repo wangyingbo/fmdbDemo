@@ -7,25 +7,11 @@
 //
 
 #import "ViewController.h"
-
-typedef NS_ENUM(NSUInteger,YBFuncItem) {
-    /***/
-    YBFuncItemSemaphore = 100,
-    /***/
-    YBFuncItemFMDBCreate,
-    /***/
-    YBFuncItemFMDBInsert,
-    /***/
-    YBFuncItemFMDBDelete,
-    /***/
-    YBFuncItemFMDBSort,
-    /***/
-    //YBFuncItem,
-};
+#import "YBSchool.h"
 
 @interface ViewController ()
 @property (nonatomic, copy) NSArray *titleArray;
-
+@property (nonatomic, strong) FMDatabase *database;
 @end
 
 @implementation ViewController
@@ -45,7 +31,8 @@ typedef NS_ENUM(NSUInteger,YBFuncItem) {
 - (void)configData {
     NSArray *arr = @[
                      YB_CREATE_ITEM(YBFuncItemSemaphore, @"semaphore"),
-                     YB_CREATE_ITEM(YBFuncItemFMDBCreate, @"FMDB_table"),
+                     YB_CREATE_ITEM(YBFuncItemFMDBCreateDB, @"FMDB_db"),
+                     YB_CREATE_ITEM(YBFuncItemFMDBCreateTable, @"FMDB_table"),
                      YB_CREATE_ITEM(YBFuncItemFMDBInsert, @"FMDB_insert"),
                      YB_CREATE_ITEM(YBFuncItemFMDBDelete, @"FMDB_delete"),
                      YB_CREATE_ITEM(YBFuncItemFMDBSort, @"FMDB_sort"),
@@ -107,9 +94,14 @@ typedef NS_ENUM(NSUInteger,YBFuncItem) {
             [self semaphore];
         }
             break;
-        case YBFuncItemFMDBCreate:
+        case YBFuncItemFMDBCreateDB:
         {
-            [self fmdb_create];
+            [self fmdb_createDB];
+        }
+            break;
+        case YBFuncItemFMDBCreateTable:
+        {
+            [self fmdb_createTable];
         }
             break;
         case YBFuncItemFMDBInsert:
@@ -165,8 +157,27 @@ typedef NS_ENUM(NSUInteger,YBFuncItem) {
     });
 }
 
-- (void)fmdb_create {
-    
+- (void)fmdb_createDB {
+    NSString *lidDirPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *databasePath = [lidDirPath stringByAppendingPathComponent:@"DatabaseDemo.sqlite"];
+    self.database = [FMDatabase databaseWithPath:databasePath];
+    if (self.database) {
+        YBLog(@"创建数据库成功");
+    }else {
+        YBLog(@"创建数据库失败");
+    }
+}
+
+- (void)fmdb_createTable {
+    if ([self.database open]) {
+        NSString *createTableSql = @"create table if not exists School(id integer primary key autoincrement, username text not null, phone text not null, age integer)";
+        BOOL result = [self.database executeUpdate:createTableSql];
+        if (result) {
+            YBLog(@"创建表成功");
+        }else {
+            YBLog(@"创建表失败");
+        }
+    }
 }
 
 - (void)fmdb_insert {

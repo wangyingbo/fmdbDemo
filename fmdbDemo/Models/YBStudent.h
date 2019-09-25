@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YBName : NSObject
+@interface YBStudent : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *ID;
 
 @end
 

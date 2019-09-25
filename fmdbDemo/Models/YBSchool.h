@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YBClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YBSchool : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *ID;
+@property (nonatomic, strong) YBClass *aClass;
 
 @end
 
