@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4B8BBE3C8B72C85056B91DFB /* libPods-fmdbDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A39C52CDEA06ECA7BFAEC050 /* libPods-fmdbDemoTests.a */; };
 		92099C2EE6EB33CB8F8B8ECA /* libPods-fmdbDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4113B4DD3EB1070E333D7C76 /* libPods-fmdbDemoUITests.a */; };
+		D148D46E233B4E8000D9E933 /* YBItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D46D233B4E8000D9E933 /* YBItem.m */; };
+		D148D474233B4F1400D9E933 /* YBSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D473233B4F1400D9E933 /* YBSchool.m */; };
+		D148D477233B4F2400D9E933 /* YBClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D476233B4F2400D9E933 /* YBClass.m */; };
+		D148D47A233B4F2E00D9E933 /* YBName.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D479233B4F2E00D9E933 /* YBName.m */; };
+		D148D47E233B538B00D9E933 /* YBFunctionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D148D47D233B538B00D9E933 /* YBFunctionTool.m */; };
 		D1B7C6E7231DF515003A3BDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B7C6E6231DF515003A3BDA /* AppDelegate.m */; };
 		D1B7C6EA231DF515003A3BDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B7C6E9231DF515003A3BDA /* ViewController.m */; };
 		D1B7C6ED231DF515003A3BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B7C6EB231DF515003A3BDA /* Main.storyboard */; };
@@ -46,6 +51,18 @@
 		8CFAC2C8A4A5185964D60334 /* Pods-fmdbDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmdbDemoTests.release.xcconfig"; path = "Target Support Files/Pods-fmdbDemoTests/Pods-fmdbDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A39C52CDEA06ECA7BFAEC050 /* libPods-fmdbDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fmdbDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B9EDB2C5F2A0AEE91DC745 /* Pods-fmdbDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fmdbDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-fmdbDemoUITests/Pods-fmdbDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D148D46B233B4DA400D9E933 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D148D46C233B4E8000D9E933 /* YBItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBItem.h; sourceTree = "<group>"; };
+		D148D46D233B4E8000D9E933 /* YBItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBItem.m; sourceTree = "<group>"; };
+		D148D472233B4F1400D9E933 /* YBSchool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBSchool.h; sourceTree = "<group>"; };
+		D148D473233B4F1400D9E933 /* YBSchool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBSchool.m; sourceTree = "<group>"; };
+		D148D475233B4F2400D9E933 /* YBClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBClass.h; sourceTree = "<group>"; };
+		D148D476233B4F2400D9E933 /* YBClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBClass.m; sourceTree = "<group>"; };
+		D148D478233B4F2E00D9E933 /* YBName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBName.h; sourceTree = "<group>"; };
+		D148D479233B4F2E00D9E933 /* YBName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBName.m; sourceTree = "<group>"; };
+		D148D47B233B4F6800D9E933 /* YBMecros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBMecros.h; sourceTree = "<group>"; };
+		D148D47C233B538B00D9E933 /* YBFunctionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBFunctionTool.h; sourceTree = "<group>"; };
+		D148D47D233B538B00D9E933 /* YBFunctionTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBFunctionTool.m; sourceTree = "<group>"; };
 		D1B7C6E2231DF515003A3BDA /* fmdbDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fmdbDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B7C6E5231DF515003A3BDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1B7C6E6231DF515003A3BDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +133,47 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D148D46F233B4E8500D9E933 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D148D47B233B4F6800D9E933 /* YBMecros.h */,
+				D148D47F233B541900D9E933 /* YBFunctionTool */,
+				D148D470233B4E9B00D9E933 /* YBItem */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D148D470233B4E9B00D9E933 /* YBItem */ = {
+			isa = PBXGroup;
+			children = (
+				D148D46C233B4E8000D9E933 /* YBItem.h */,
+				D148D46D233B4E8000D9E933 /* YBItem.m */,
+			);
+			path = YBItem;
+			sourceTree = "<group>";
+		};
+		D148D471233B4EF800D9E933 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D148D472233B4F1400D9E933 /* YBSchool.h */,
+				D148D473233B4F1400D9E933 /* YBSchool.m */,
+				D148D475233B4F2400D9E933 /* YBClass.h */,
+				D148D476233B4F2400D9E933 /* YBClass.m */,
+				D148D478233B4F2E00D9E933 /* YBName.h */,
+				D148D479233B4F2E00D9E933 /* YBName.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D148D47F233B541900D9E933 /* YBFunctionTool */ = {
+			isa = PBXGroup;
+			children = (
+				D148D47C233B538B00D9E933 /* YBFunctionTool.h */,
+				D148D47D233B538B00D9E933 /* YBFunctionTool.m */,
+			);
+			path = YBFunctionTool;
+			sourceTree = "<group>";
+		};
 		D1B7C6D9231DF515003A3BDA = {
 			isa = PBXGroup;
 			children = (
@@ -145,11 +203,14 @@
 				D1B7C6E6231DF515003A3BDA /* AppDelegate.m */,
 				D1B7C6E8231DF515003A3BDA /* ViewController.h */,
 				D1B7C6E9231DF515003A3BDA /* ViewController.m */,
+				D148D471233B4EF800D9E933 /* Models */,
+				D148D46F233B4E8500D9E933 /* Tools */,
 				D1B7C6EB231DF515003A3BDA /* Main.storyboard */,
 				D1B7C6EE231DF516003A3BDA /* Assets.xcassets */,
 				D1B7C6F0231DF516003A3BDA /* LaunchScreen.storyboard */,
 				D1B7C6F3231DF516003A3BDA /* Info.plist */,
 				D1B7C6F4231DF516003A3BDA /* main.m */,
+				D148D46B233B4DA400D9E933 /* PrefixHeader.pch */,
 			);
 			path = fmdbDemo;
 			sourceTree = "<group>";
@@ -374,9 +435,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D148D474233B4F1400D9E933 /* YBSchool.m in Sources */,
 				D1B7C6EA231DF515003A3BDA /* ViewController.m in Sources */,
+				D148D47E233B538B00D9E933 /* YBFunctionTool.m in Sources */,
+				D148D46E233B4E8000D9E933 /* YBItem.m in Sources */,
 				D1B7C6F5231DF516003A3BDA /* main.m in Sources */,
 				D1B7C6E7231DF515003A3BDA /* AppDelegate.m in Sources */,
+				D148D47A233B4F2E00D9E933 /* YBName.m in Sources */,
+				D148D477233B4F2400D9E933 /* YBClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +616,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T9CHG78WE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/fmdbDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = fmdbDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,6 +636,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T9CHG78WE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/fmdbDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = fmdbDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

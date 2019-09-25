@@ -8,6 +8,9 @@ target 'fmdbDemo' do
   # Pods for fmdbDemo
 
   pod 'FMDB'
+  pod 'Toast', '~> 4.0.0'
+
+
 
   target 'fmdbDemoTests' do
     inherit! :search_paths
