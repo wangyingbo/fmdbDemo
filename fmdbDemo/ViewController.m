@@ -29,14 +29,22 @@
 
 #pragma mark - configData
 - (void)configData {
+    //测试YIFMDB
+    YBItem *yifmdbDemo = YB_CREATE_ITEM(YBFuncItemYIFMDBDemo, @"YIFMDB_demo");
+    yifmdbDemo.width = FULL_SCREEN_WIDTH - 50;
+    
     NSArray *arr = @[
+                     yifmdbDemo,
                      YB_CREATE_ITEM(YBFuncItemSemaphore, @"semaphore"),
                      YB_CREATE_ITEM(YBFuncItemFMDBCreateDB, @"FMDB_db"),
                      YB_CREATE_ITEM(YBFuncItemFMDBCreateTable, @"FMDB_table"),
                      YB_CREATE_ITEM(YBFuncItemFMDBInsert, @"FMDB_insert"),
                      YB_CREATE_ITEM(YBFuncItemFMDBDelete, @"FMDB_delete"),
                      YB_CREATE_ITEM(YBFuncItemFMDBSort, @"FMDB_sort"),
+                     YB_CREATE_ITEM(YBFuncItemFMDBUpdate, @"FMDB_update"),
+                     YB_CREATE_ITEM(YBFuncItemFMDBSelect, @"FMDB_select"),
                      ];
+    
     self.titleArray = arr;
 }
 
@@ -52,9 +60,9 @@
     UIButton *lastButton;
     CGFloat leftMargin = 25.f;
     CGFloat rightMargin = 25.f;
-    CGFloat topMargin = NAVIGATION_H + 50.f;
-    CGFloat space_horizontal = 20.f;
-    CGFloat space_vertical = 20.f;
+    CGFloat topMargin = NAVIGATION_H + 50.f;//第一行与父视图的上边距
+    CGFloat space_horizontal = 20.f;//列间距
+    CGFloat space_vertical = 20.f;//行间距
     
     for (int i=0;i<self.titleArray.count;i++) {
         YBItem *item = self.titleArray[i];
@@ -69,6 +77,9 @@
         
         CGSize buttonSize = [button sizeThatFits:CGSizeMake(FULL_SCREEN_WIDTH-leftMargin-rightMargin, MAXFLOAT)];
         buttonSize = CGSizeMake(buttonSize.width+15, buttonSize.height+2);
+        if (item.width>1e-6) {
+            buttonSize = CGSizeMake(item.width, buttonSize.height);
+        }
         CGFloat button_x = leftMargin;
         CGFloat button_y = topMargin;
         if (lastButton) {
@@ -117,6 +128,16 @@
         case YBFuncItemFMDBSort:
         {
             [self fmdb_sort];
+        }
+            break;
+        case YBFuncItemFMDBUpdate:
+        {
+            [self fmdb_update];
+        }
+            break;
+        case YBFuncItemFMDBSelect:
+        {
+            [self fmdb_select];
         }
             break;
             
@@ -169,6 +190,9 @@
 }
 
 - (void)fmdb_createTable {
+    if (!self.database) {
+        [self fmdb_createDB];
+    }
     if ([self.database open]) {
         NSString *createTableSql = @"create table if not exists School(id integer primary key autoincrement, username text not null, phone text not null, age integer)";
         BOOL result = [self.database executeUpdate:createTableSql];
@@ -181,15 +205,73 @@
 }
 
 - (void)fmdb_insert {
-    
+    if (!self.database) {
+        [self fmdb_createTable];
+    }
+    if ([self.database open]) {
+        int x = arc4random() % 100;
+        NSString *insertSql = @"insert into School(username, phone, age) values(?,?,?)";
+        BOOL result = [self.database executeUpdate:insertSql,[NSString stringWithFormat:@"wyb%d",x],@"13011192915",[NSNumber numberWithInt:x]];
+        if (result) {
+            YBLog(@"插入数据成功");
+        }else {
+            YBLog(@"插入数据失败");
+        }
+        [self.database close];
+    }
 }
 
 - (void)fmdb_delete {
-    
+    if (!self.database) {
+        [self fmdb_createTable];
+    }
+    if ([self.database open]) {
+        NSString *deleteSql = @"delete from School where username = ?";
+        BOOL result = [self.database executeUpdate:deleteSql, @"wyb"];
+        if (result) {
+            YBLog(@"删除数据成功");
+        } else {
+            YBLog(@"删除数据失败");
+        }
+        [self.database close];
+    }
 }
 
 - (void)fmdb_sort {
     
+}
+
+- (void)fmdb_update {
+    if (!self.database) {
+        [self fmdb_createTable];
+    }
+    if ([self.database open]) {
+        NSString *updateSql = @"update School set phone = ? where username = ?";
+        BOOL result = [self.database executeUpdate:updateSql, @"15823456789", @"8"];
+        if (result) {
+            YBLog(@"更新数据成功");
+        } else {
+            YBLog(@"更新数据失败");
+        }
+        [self.database close];
+    }
+}
+
+- (void)fmdb_select {
+    if (!self.database) {
+        [self fmdb_createTable];
+    }
+    if ([self.database open]) {
+        NSString *selectSql = @"select * from School";
+        FMResultSet *resultSet = [self.database executeQuery:selectSql];
+        while ([resultSet next]) {
+            NSString *username = [resultSet stringForColumn:@"username"];
+            NSString *phone = [resultSet stringForColumn:@"phone"];
+            NSInteger age = [resultSet intForColumn:@"age"];
+            YBLog(@"username=%@, phone=%@, age=%ld \n", username, phone, age);
+        }
+        [self.database close];
+    }
 }
 
 

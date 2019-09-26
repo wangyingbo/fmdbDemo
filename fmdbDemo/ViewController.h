@@ -10,7 +10,9 @@
 
 typedef NS_ENUM(NSUInteger,YBFuncItem) {
     /***/
-    YBFuncItemSemaphore = 100,
+    YBFuncItemYIFMDBDemo,
+    /***/
+    YBFuncItemSemaphore,
     /***/
     YBFuncItemFMDBCreateDB,
     /***/
@@ -21,6 +23,10 @@ typedef NS_ENUM(NSUInteger,YBFuncItem) {
     YBFuncItemFMDBDelete,
     /***/
     YBFuncItemFMDBSort,
+    /***/
+    YBFuncItemFMDBUpdate,
+    /***/
+    YBFuncItemFMDBSelect,
     /***/
     //YBFuncItem,
 };

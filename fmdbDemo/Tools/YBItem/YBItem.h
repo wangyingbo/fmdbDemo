@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSNumber *tag;
 @property (nonatomic, copy) NSString *name;
+//optional
+@property (nonatomic, assign) CGFloat width;
 
 + (instancetype)create:(NSUInteger)tag name:(NSString *)name;
 
