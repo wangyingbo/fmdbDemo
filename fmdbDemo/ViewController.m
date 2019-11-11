@@ -25,6 +25,8 @@
     [self configData];
     
     [self configButtons];
+    
+    NSLog(@"");
 }
 
 #pragma mark - configData
